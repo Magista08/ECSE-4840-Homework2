@@ -1,9 +1,16 @@
 import pandas as pd
 import numpy as np
 
+OUTPUT = 0
+
 
 def GetData(FileName):
     # Test the file opened is correct or not
+    ProcessedData = {
+        'CO': [],
+        'PT08.S1': [],
+
+    }
     try:
         OpenSignal = open(FileName)
         OpenSignal.close()
@@ -23,10 +30,14 @@ def GetData(FileName):
     print(PrintData)
     '''
 
+    return RowData
 
-def GradientDescent():
+
+def StochasticGD():
     return
 
 
 if __name__ == "__main__":
-    GetData("AirQualityUCI.xlsx")
+    OriginalData = GetData("AirQualityUCI.xlsx")
+
+    print("Data All ready")
