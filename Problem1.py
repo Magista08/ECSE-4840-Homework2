@@ -5,19 +5,21 @@ OUTPUT = 0
 
 
 def GetData(_FileName):
-    # Test the file opened is correct or not
+    # Prepare for the output data
     ProcessedData = {
         'CO': [],
         'Tin Oxide': [],
         'Hydro Carbons': [],
         'Benzene': [],
-        'Titania':[],
+        'Titania': [],
         'NOx': [],
         'Tungsten Oxide3': [],
         'NO2': [],
         'Tungsten Oxide4': [],
         'Indium Oxide': []
     }
+
+    # Test the file opened is correct or not
     try:
         OpenSignal = open(_FileName)
         OpenSignal.close()
