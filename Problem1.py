@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
 
-OUTPUT = 0
-
 
 def GetData(_FileName):
     # Prepare for the output data
@@ -65,5 +63,12 @@ def StochasticGD(_SequenceNum):
 if __name__ == "__main__":
     OriginalData = GetData("AirQualityUCI.xlsx")
 
+    '''
+    # Test the validation of the dictionary
     print("Data All ready")
     print(OriginalData['CO'])
+    '''
+
+    vector = np.array([1,2,3,4], dtype=float)
+    a = np.gradient(vector, 2)
+    print(a)
